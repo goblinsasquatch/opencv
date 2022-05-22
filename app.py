@@ -9,6 +9,7 @@ def video_stream():
     while True:
         ret, frame = video.read()
         if not ret:
+            print('breaking')
             break
         else:
             ret, buffer = cv2.imencode('.jpeg', frame)
